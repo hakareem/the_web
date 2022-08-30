@@ -1,0 +1,16 @@
+<% if @name.empty? %>
+<form action="/named-cat">
+  <input type="text" name="name" placeholder="Enter a name">
+  <input type="text" colour="colour" placeholder="Enter a colour">
+  <input type="submit" value="Submit">
+</form>
+<% else %>
+<h1>Hello, my name is <%= @name %> </h1> 
+
+<div style='border:dashed blue; margin: 100px; width: 200px'> 
+<img src='http://placekitten.com/200/200'>
+</div>
+<% end %>
+
+
+

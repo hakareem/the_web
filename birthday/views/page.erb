@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday</title>
+    </head>
+    <body style ="background-color: yellow; text-align: center;">
+    <% t = Time.now%>
+<% if @month == Time.new.strftime("%B") && @day == t.day.to_s%>
+    <h1 style="color:black;text-align:center;">Happy Birthday <%= @name %>!</h1>
+<% else %>
+    <% today = DateTime.now%>
+    <% birthday = Date.new(2022,Date::MONTHNAMES.index(@month), @day.to_i)%>
+    <% days_left = birthday - today %>
+    <h1 style="color:black;text-align:center;">Your birthday will be in <%= days_left.to_i %> days,  <%= @name %>.</h1> 
+<% end %>
+</body>
+</html>
+
+
